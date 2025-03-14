@@ -1,0 +1,7 @@
+void main() {
+  
+Set<int> codigosDisponiveis = {1, 2, 3, 4, 5}; 
+  int codigo = 2;
+  print(codigosDisponiveis.contains(codigo));
+  
+}
