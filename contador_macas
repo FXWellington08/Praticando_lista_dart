@@ -1,0 +1,15 @@
+void main() {
+
+// Este é apenas um exemplo, os valores que a lista possui podem variar. 
+
+List<String> produtos = ["maçã", "banana", "maçã", "laranja", "maçã"];
+
+List<String> contaMacas = [];
+  
+  for (String prod in produtos){
+    if(prod == "maçã"){
+     contaMacas.add(prod);    
+    }
+  }
+print(contaMacas.length);
+}
