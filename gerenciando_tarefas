@@ -1,0 +1,10 @@
+void main() {
+
+// Este é apenas um exemplo, os valores que a lista possui podem variar. 
+
+  List<String> tarefas = ["Estudar", "Comprar mantimentos"]; 
+
+  for (String tarefa in tarefas){
+    print(tarefa);
+  }
+}
