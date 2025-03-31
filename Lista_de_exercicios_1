@@ -1,0 +1,52 @@
+
+void main() {
+
+  ItemEstoque smartphone = ItemEstoque("Smartphone", 100, 1600.90);
+  ItemEstoque notebook = ItemEstoque("Notebook", 50, 2500.00);
+  ItemEstoque tablet = ItemEstoque("Tablet", 70, 1200.50);
+  ItemEstoque smartwatch = ItemEstoque("Smartwatch", 150, 899.99);
+  ItemEstoque camera = ItemEstoque("Câmera", 30, 3200.75);
+
+  List<ItemEstoque> estoque = <ItemEstoque>[smartphone,notebook, tablet, smartwatch, camera];
+
+  smartwatch.saidaItem(50);
+  camera.entradaItem(30);
+  tablet.alterarPrecoItem(999.994);
+
+
+  for (ItemEstoque item in estoque){
+
+      print("\nNome do Produto: ${item.nomeProduto}");
+      print("Quantidade em estoque: ${item.quantidadeProduto}");
+      print("Preço R\$ ${item.preco.toStringAsFixed(2)}");
+
+  }
+}
+
+class ItemEstoque{
+  String nomeProduto;
+  int quantidadeProduto;
+  double preco;
+  
+  ItemEstoque(this.nomeProduto,this.quantidadeProduto, this.preco);
+
+  int entradaItem(int entrada){
+    quantidadeProduto += entrada;
+    return quantidadeProduto;
+  }
+
+  int saidaItem(int saida){
+    if(saida < quantidadeProduto){
+      quantidadeProduto -= saida;
+    }else{
+      print("Valor superior ao da quantidade de produtos");
+    }
+    return quantidadeProduto;
+  }
+
+  double alterarPrecoItem(double novoPreco){
+    preco = novoPreco;
+    return preco;
+  }
+
+}
